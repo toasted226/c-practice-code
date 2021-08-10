@@ -6,11 +6,12 @@ int main()
 {
     char grade;
 
-    printf("Enter grade: ");
-    scanf(" %c", &grade);
-    grade = tolower(grade);
+    printf("Enter grade: "); //Prompt user to enter a grade, like A, B, C, D, F
+    scanf(" %c", &grade); //Get input from user, specifying a char (%c), &grade to specify the
+    //memory address of it
+    grade = tolower(grade); //Get the lowercase char, just in case the user changed cases
 
-    switch (grade)
+    switch (grade) //switch-case statement to check the different possible grades
     {
         case 'a':
             printf("You did amazing!\n");

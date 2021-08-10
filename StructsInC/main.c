@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct Student 
+//There are no classes in C, so these are the best way to store groups of values
+struct Student //Structs, very similar to C#
 {
     char name[50];
     int age;
@@ -12,11 +13,12 @@ struct Student
 
 int main() 
 {
-    struct Student student1;
-    student1.age = 22;
+    struct Student student1; //Create an instance of the Student struct
+    student1.age = 22; //Give it values
     student1.gpa = 3.2;
-    strcpy(student1.name, "Jim");
-    strcpy(student1.major, "Business");
+    strcpy(student1.name, "Jim"); //Can't directly assign vales to arrays (char array = string)
+    strcpy(student1.major, "Business"); //To assign a value to a char array, use strcopy
+    //     var name          value
 
     struct Student student2;
     student2.age = 20;
@@ -26,6 +28,7 @@ int main()
 
     printf("%f\n", student1.gpa);
     printf("%s\n", student2.name);
+    //Print values from the structs
 
     return 0;
 }
